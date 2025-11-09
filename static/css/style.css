@@ -114,3 +114,34 @@ tbody tr:nth-child(even) {
 .btn-cancel:hover {
     background-color: #5a6268;
 }
+
+/* --- Estilos para Botões de Ação na Tabela --- */
+.action-buttons {
+    display: flex;
+    gap: 5px; /* Espaço entre os botões */
+    justify-content: center;
+}
+
+.action-buttons a {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Amarelo */
+    color: #333;
+}
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Vermelho */
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
