@@ -17,6 +17,7 @@
         action="{{ url_for('atualizar', id=produto.ID) }}"
         method="post"
         class="form-add"
+        id="formEditar"
       >
         <div class="form-group">
           <label for="nome">Nome do Produto:</label>
@@ -44,6 +45,7 @@
             name="quantidade"
             value="{{ produto.Quantidade }}"
             required
+            min="0"
           />
         </div>
 
@@ -59,5 +61,21 @@
         </div>
       </form>
     </div>
+
+    <script>
+      document.getElementById("formEditar").onsubmit = function (event) {
+        var quantidadeInput = document.getElementById("quantidade");
+        var valor = parseInt(quantidadeInput.value);
+
+        if (valor < 0) {
+          alert(
+            "Erro: Não é possível salvar o produto com quantidade negativa."
+          );
+          event.preventDefault();
+          return false;
+        }
+        return true;
+      };
+    </script>
   </body>
 </html>

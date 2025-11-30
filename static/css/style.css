@@ -100,7 +100,7 @@ tbody tr:nth-child(even) {
 }
 
 .btn-submit {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff; /
 }
 
 .btn-submit:hover {
@@ -108,17 +108,17 @@ tbody tr:nth-child(even) {
 }
 
 .btn-cancel {
-    background-color: #6c757d; /* Cinza */
+    background-color: #6c757d; 
 }
 
 .btn-cancel:hover {
     background-color: #5a6268;
 }
 
-/* --- Estilos para Botões de Ação na Tabela --- */
+
 .action-buttons {
     display: flex;
-    gap: 5px; /* Espaço entre os botões */
+    gap: 5px; 
     justify-content: center;
 }
 
@@ -132,7 +132,7 @@ tbody tr:nth-child(even) {
 }
 
 .btn-edit {
-    background-color: #ffc107; /* Amarelo */
+    background-color: #ffc107; 
     color: #333;
 }
 .btn-edit:hover {
@@ -140,8 +140,44 @@ tbody tr:nth-child(even) {
 }
 
 .btn-delete {
-    background-color: #dc3545; /* Vermelho */
+    background-color: #dc3545; 
 }
 .btn-delete:hover {
     background-color: #c82333;
+}
+
+
+.badge-alerta {
+    display: inline-block;
+    background-color: #ffeeba; 
+    color: #856404; 
+    border: 1px solid #ffeeba;
+    padding: 2px 6px;
+    font-size: 0.75rem; 
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+.badge-alerta {
+    display: inline-block;
+    background-color: #ffeeba;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.badge-esgotado {
+    display: inline-block;
+    background-color: #dc3545; 
+    color: #fff; 
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 5px;
 }
