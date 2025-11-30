@@ -32,7 +32,16 @@
           <tr>
             <td>{{ produto.Nome }}</td>
             <td>{{ produto.Descricao }}</td>
-            <td>{{ produto.Quantidade }}</td>
+            <td>
+              {{ produto.Quantidade }} {% if produto.Quantidade == 0 %}
+              <br />
+              <span class="badge-esgotado">🚫 Esgotado!</span>
+
+              {% elif produto.Quantidade < 5 %}
+              <br />
+              <span class="badge-alerta">⚠️ Estoque Baixo!</span>
+              {% endif %}
+            </td>
             <td>{{ "%.2f"|format(produto.Preco) }}</td>
 
             <td class="action-buttons">

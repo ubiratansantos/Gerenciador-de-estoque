@@ -22,10 +22,19 @@ def get_produtos():
         cursor.execute(
             "SELECT ID, Nome, Descricao, Quantidade, Preco FROM Produtos")
         rows = cursor.fetchall()
+
         for row in rows:
+            # --- Lógica de Verificação de Estoque Baixo ---
+            # Se a quantidade for menor que 5, define alerta como True
+            tem_estoque_baixo = row.Quantidade < 5
+
             produtos.append({
-                "ID": row.ID, "Nome": row.Nome, "Descricao": row.Descricao,
-                "Quantidade": row.Quantidade, "Preco": row.Preco
+                "ID": row.ID,
+                "Nome": row.Nome,
+                "Descricao": row.Descricao,
+                "Quantidade": row.Quantidade,
+                "Preco": row.Preco,
+                "Alerta": tem_estoque_baixo  # Adicionamos essa nova informação ao dicionário
             })
     except Exception as e:
         print(f"Erro ao buscar dados: {e}")
@@ -33,7 +42,6 @@ def get_produtos():
         if conn:
             conn.close()
     return produtos
-
 # --- Definição das Rotas ---
 
 # Rota principal que exibe a lista de produtos (da Etapa 1)
